@@ -1,8 +1,18 @@
-export function Tarefas(){
-  return(
+interface TaskProps {
+  titulo: string;
+  descricao: string;
+  data: string;
+  status: boolean;
+}
+
+export function Task(props: TaskProps) {
+  return (
     <div>
-      <label>Adicione uma nova tarefa:</label>
-      <input type='text' name="novatarefa"/>
+      <h2>{props.titulo}</h2>
+      <p>{props.descricao}</p>
+      <p>{props.data}</p>
+      <p>
+        <input type="checkbox" name="status" checked={props.status}/>Feito</p>
     </div>
-  )
+  );
 }
