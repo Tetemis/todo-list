@@ -22,7 +22,7 @@ export function TaskForm() {
 
   return (
     <div>
-      <label>Tarefa</label>
+      <label>ToDo: </label>
       <input
         type="text"
         placeholder="Descrição da Tarefa"
@@ -31,7 +31,7 @@ export function TaskForm() {
 
       <br />
 
-      <button onClick={addItem}>Cadastrar Tarefa</button>
+      <button onClick={addItem}>Nova Tarefa</button>
       {lista.map((item, index) => (
         <p key={index}>
           {item}
